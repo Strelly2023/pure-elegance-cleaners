@@ -1,4 +1,3 @@
-
 :root{
   --navy:#1A1A2E;
   --cream:#F8F5F0;
@@ -9,13 +8,16 @@
   --muted:#5A6175;
   --white:#ffffff;
 }
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--ink);
   background:var(--cream);
+  overflow-x:hidden; /* prevent horizontal scroll */
 }
+
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{width:min(1120px,90vw);margin-inline:auto}
@@ -34,8 +36,27 @@ header{
 .brand-title .accent{background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .tag{font-size:.8rem;color:var(--muted)}
 .nav ul{display:flex;gap:1.1rem;list-style:none;margin:0;padding:0}
-.btn{display:inline-block;padding:.75rem 1.1rem;border-radius:999px;font-weight:600;border:2px solid var(--gold);
-  color:var(--white);background:linear-gradient(135deg,var(--gold),var(--gold-2));transition:.2s}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--navy);
+}
+
+.btn{
+  display:inline-block;
+  padding:.75rem 1.1rem;
+  border-radius:999px;
+  font-weight:600;
+  border:2px solid var(--gold);
+  color:var(--white);
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  transition:.2s
+}
 .btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(212,175,55,.25)}
 .btn.outline{background:transparent;color:var(--gold)}
 
@@ -82,14 +103,39 @@ input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(21
 /* Footer */
 footer{background:var(--navy);color:#e7e7ee}
 
+/* Responsive Breakpoints */
 @media (max-width: 920px){
   .hero-inner{grid-template-columns:1fr;gap:1.75rem}
   .services .card{grid-column:span 6}
   .pricing{grid-template-columns:1fr}
   .cta{flex-direction:column;text-align:center}
 }
+
 @media (max-width: 640px){
-  .nav ul{display:none}
+  .menu-toggle{display:block}
+  .nav ul{
+    display:none;
+    flex-direction:column;
+    background:var(--white);
+    position:absolute;
+    top:100%;
+    right:1rem;
+    border:1px solid rgba(26,26,46,.1);
+    border-radius:.75rem;
+    padding:1rem;
+    box-shadow:0 6px 16px rgba(0,0,0,.1);
+  }
+  .nav ul.open{display:flex}
   .services .card{grid-column:span 12}
-  form{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;gap:1.25rem}
+  input,textarea{font-size:1rem}
+  .hero-inner{padding:2rem 0}
+  .hero h1{font-size:1.8rem}
+  .rate{justify-content:center;width:100%}
+}
+
+@media (max-width: 480px){
+  .services .card{padding:1rem}
+  .price-big{font-size:1.6rem}
+  .btn{padding:.65rem 1rem;font-size:.9rem}
 }
