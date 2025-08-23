@@ -139,3 +139,40 @@ footer{background:var(--navy);color:#e7e7ee}
   .price-big{font-size:1.6rem}
   .btn{padding:.65rem 1rem;font-size:.9rem}
 }
+
+/* Contact Section */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 1rem;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;   /* stack items vertically */
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form form input,
+  .contact-form form textarea,
+  .contact-form form button {
+    width: 100%;   /* make fields fill screen width */
+    box-sizing: border-box;
+  }
+}
+
