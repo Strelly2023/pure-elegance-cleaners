@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Auto update footer year
+  // === Auto update footer year ===
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Centralized rate (easily change here)
+  // === Centralized rate update ===
   const PUBLIC_RATE = 0.25;
   document.querySelectorAll('#rateValue, #rateValue2').forEach(el => {
     if (el) el.textContent = PUBLIC_RATE.toFixed(2);
   });
 
-  // Handle all forms marked with [data-form]
+  // === Handle all forms marked with [data-form] ===
   const forms = document.querySelectorAll('form[data-form]');
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
@@ -33,4 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
     });
   });
+
+  // === Mobile menu toggle ===
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav ul');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  }
 });
