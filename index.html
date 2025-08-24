@@ -1,302 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pure Elegance Cleaners – Where Cleanliness Meets Elegance</title>
-  <meta name="description" content="Pure Elegance Cleaners: Residential, commercial, post-construction, move-in/move-out, deep cleaning, and specialty services with an elegant, premium touch." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Pure Elegance Cleaners",
-  "image": "assets/img/logo.svg",
-  "telephone": "+1-226-505-7777",
-  "email": "info@pureelegancecleaners.com",
-  "url": "https://www.pureelegancecleaners.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "",
-    "addressRegion": "",
-    "addressCountry": "CA"
-  },
-  "description": "Residential, commercial, post-construction, move-in/move-out, deep cleaning, and specialty services.",
-  "priceRange": "$$"
-}
-  </script>
+  <meta name="description" content="Pure Elegance Cleaners offers residential, commercial, move-in/out, and deep cleaning with an elegant, premium touch."/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main">
-      <a class="brand" href="#home" aria-label="Pure Elegance Cleaners home">
-       <!-- <img src="assets/img/logo.svg" alt="Pure Elegance Cleaners logo" />-->
-        <img src="assets/img/pec_img.jpeg" alt="Pure Elegance Cleaners logo"/>
-        <div>
-          <div class="brand-title">
-            <span>Pure Elegance</span> <span class="accent">Cleaners</span>
-          </div>
-          <div class="tag">Where Cleanliness Meets Elegance</div>
-        </div>
-      </a>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="btn" style="padding:.55rem 1rem">Get a Quote</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container header-flex">
+      <img src="assets/img/logo.svg" alt="Pure Elegance Cleaners Logo" class="logo"/>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#quote">Get Quote</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <main id="home" class="hero">
-    <div class="container hero-inner">
-      <div>
-        <span class="pill" aria-label="Ready to experience elegant cleaning?">Ready to experience <small>elegant</small> cleaning?</span>
-        <h1>Spotless spaces, elevated with <span class="accent">elegance</span>.</h1>
-        <p>From post‑construction to deep cleaning, we bring professional‑grade tools, vetted crews, and meticulous checklists to every job—so you can relax in a space that feels brand new.</p>
-        <div style="display:flex;gap:1rem;margin-top:1rem;align-items:center;flex-wrap:wrap">
-          <a href="#contact" class="btn" aria-label="Request a quote">Request a Quote</a>
-          <a href="#services" class="btn outline" aria-label="See our services">See Services</a>
-          <div class="rate" aria-label="Rate per square foot">
-            <div>
-              <div style="opacity:.8;font-weight:600">Rate</div>
-              <div class="price">${}<span id="rateValue">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="media-card" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop" alt="Professional cleaners vacuuming a modern office floor" />
-        </div>
-      </div>
+  <section class="hero">
+    <div class="container">
+      <h1>Where Cleanliness Meets Elegance</h1>
+      <p>Premium cleaning services for homes, offices, and businesses.</p>
+      <a href="#quote" class="btn-primary">Request a Quote</a>
     </div>
-  </main>
+  </section>
 
   <!-- Services -->
-  <section id="services">
+  <section id="services" class="services container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Residential Cleaning</h3>
+        <p>Thorough cleaning to refresh and maintain your living spaces.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Cleaning</h3>
+        <p>Professional cleaning for offices, retail, and business spaces.</p>
+      </div>
+      <div class="card">
+        <h3>Move-In / Move-Out</h3>
+        <p>Make moving stress-free with spotless, ready-to-go spaces.</p>
+      </div>
+      <div class="card">
+        <h3>Deep Cleaning</h3>
+        <p>Comprehensive top-to-bottom cleaning for every corner.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section id="quote" class="form-section">
     <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="muted" style="margin-bottom:1.25rem">Every service follows a detailed, room‑by‑room checklist and final walkthrough to ensure nothing is missed.</p>
-      <div class="services" role="list">
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">🏠</div>
-          <h3>Residential Cleaning</h3>
-          <p>Tailored cleaning for apartments, houses, and villas—regular, one‑time, and seasonal. Kitchens, bathrooms, living areas, and bedrooms meticulously refreshed.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">🧹</div>
-          <h3>Deep Cleaning</h3>
-          <p>Top‑to‑bottom intensive clean covering high/low dusting, baseboards, vents, grout, behind appliances, interior windows, and more.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">📦</div>
-          <h3>Move‑In / Move‑Out</h3>
-          <p>Inspection‑ready cleans including inside cabinets, closets, and appliances—perfect for tenants, landlords, and property managers.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">🏗️</div>
-          <h3>Post‑Construction Cleaning</h3>
-          <p>Removal of drywall dust, debris, stickers, paint splatter, and residue. HEPA vacuuming and fine detailing to make new builds and renovations move‑in ready.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">🏢</div>
-          <h3>Commercial Cleaning</h3>
-          <p>Professional cleaning for offices, clinics, and retail. Day or night schedules, high‑touch disinfection, breakroom/restroom care, and floor maintenance.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon" aria-hidden="true">🧼</div>
-          <h3>Specialty Services</h3>
-          <p>Upholstery care, carpet shampooing, oven/fridge detailing, balcony/patio cleans, and eco‑friendly product options upon request.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing / Why Us -->
-  <section id="pricing">
-    <div class="container pricing">
-      <div class="price-card" aria-labelledby="price-head">
-        <h2 id="price-head" class="section-title">Transparent Pricing</h2>
-        <p class="muted">Simple rates, custom quotes for unique jobs.</p>
-        <ul>
-          <li style="margin:.5rem 0">• Standard cleaning from <strong>$0.25 / sq. ft</strong></li>
-          <li style="margin:.5rem 0">• Post‑construction & deep cleaning quoted on‑site</li>
-          <li style="margin:.5rem 0">• Volume & recurring discounts available</li>
-        </ul>
-        <div style="margin-top:1rem" class="rate">
-          <div>
-            <div style="opacity:.9">Typical rate</div>
-            <div class="price">${}<span id="rateValue2">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
-          </div>
-        </div>
-        <p class="muted" style="font-size:.9rem;margin-top:.75rem">*Final pricing depends on size, condition, access, and scope.</p>
-      </div>
-      <div class="price-card" aria-labelledby="why-head">
-        <h2 id="why-head" class="section-title">Why Choose Pure Elegance</h2>
-        <ul>
-          <li style="margin:.5rem 0">• Insured & background‑checked pros</li>
-          <li style="margin:.5rem 0">• Checklisted quality control</li>
-          <li style="margin:.5rem 0">• Eco‑friendly products on request</li>
-          <li style="margin:.5rem 0">• Flexible scheduling and reminders</li>
-          <li style="margin:.5rem 0">• 100% satisfaction guarantee</li>
-        </ul>
-        <a href="#contact" class="btn" style="margin-top:1rem">Book an Estimate</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <p class="muted">We’re a local, detail‑obsessed team committed to reliable communication, respectful service, and spotless results. Our technicians are trained on material‑safe methods for stone, wood, vinyl, tile, stainless steel, and more.</p>
-    </div>
-  </section>
-
-  <!-- CTA Band -->
-  <section aria-label="call to action">
-    <div class="container cta">
-      <div>
-        <h2 style="margin:0 0 .25rem">Ready for elegant cleaning?</h2>
-        <p style="margin:0;color:#d6f1ff">Tell us about your space and get a fast, no‑obligation quote.</p>
-      </div>
-      <a href="#contact" class="btn" aria-label="Start your quote">Start Your Quote</a>
-    </div>
-  </section>
-
-  
-    <!-- Booking Form -->
- <form aria-label="Book a cleaning" data-form="booking" class="form-section">
-  <label>
-    <span class="muted">Full Name</span>
-    <input type="text" required placeholder="Jane Doe" />
-  </label>
-  <label>
-    <span class="muted">Email</span>
-    <input type="email" required placeholder="you@example.com" />
-  </label>
-  <label>
-    <span class="muted">Phone</span>
-    <input type="tel" required placeholder="(226) 505-7777" />
-  </label>
-  <label>
-    <span class="muted">Preferred Date</span>
-    <input type="date" required />
-  </label>
-  <label class="full">
-    <span class="muted">Service Type</span>
-    <select required>
-      <option value="">Select a service</option>
-      <option>Residential Cleaning</option>
-      <option>Commercial Cleaning</option>
-      <option>Move-In / Move-Out</option>
-      <option>Post-Construction</option>
-      <option>Deep Cleaning</option>
-      <option>Specialty</option>
-    </select>
-  </label>
-  <label class="full">
-    <span class="muted">Notes</span>
-    <textarea rows="4" placeholder="Any details we should know?"></textarea>
-  </label>
-  <div class="full">
-    <button class="btn" type="submit">Confirm Booking</button>
-  </div>
-</form>
-
-<form aria-label="Request a quote" data-form="quote" class="form-section">
-  <label>
-    <span class="muted">Your Name</span>
-    <input type="text" required placeholder="Jane Doe" />
-  </label>
-  <label>
-    <span class="muted">Email</span>
-    <input type="email" required placeholder="you@example.com" />
-  </label>
-  <label>
-    <span class="muted">Phone</span>
-    <input type="tel" placeholder="(226) 505-7777" />
-  </label>
-  <label class="full">
-    <span class="muted">Property Size</span>
-    <input type="text" placeholder="e.g. 1500 sq. ft, 3 bed / 2 bath" />
-  </label>
-  <label class="full">
-    <span class="muted">Service Type</span>
-    <input type="text" placeholder="Post-construction, Deep Clean, etc." />
-  </label>
-  <label class="full">
-    <span class="muted">Message</span>
-    <textarea rows="4" placeholder="Any specific details?"></textarea>
-  </label>
-  <div class="full">
-    <button class="btn" type="submit">Get My Quote</button>
-  </div>
-</form>
-
-
- <!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="muted" style="margin-bottom:1rem">Call, email, or use the form—our team will respond promptly.</div>
-
-    <div class="contact">
-      <form aria-label="Request a quote" data-contact-form class="contact-form">
-        <label class="full">
-          <span class="muted">Your Name</span>
-          <input aria-label="Your Name" required placeholder="Jane Doe" />
+      <h2>Request a Quote</h2>
+      <form data-quote-form>
+        <label>
+          Name
+          <input type="text" name="name" required/>
         </label>
         <label>
-          <span class="muted">Email</span>
-          <input type="email" aria-label="Email" required placeholder="you@example.com" />
+          Email
+          <input type="email" name="email" required/>
         </label>
         <label>
-          <span class="muted">Phone</span>
-          <input type="tel" aria-label="Phone" placeholder="(226) 505-7777" />
+          Service Type
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Residential Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Move-In / Move-Out</option>
+            <option>Deep Cleaning</option>
+          </select>
         </label>
-        <label class="full">
-          <span class="muted">Location & Size</span>
-          <input aria-label="Location and size" placeholder="Address or area • Approx. square footage" />
+        <label>
+          Details
+          <textarea name="details" rows="4"></textarea>
         </label>
-        <label class="full">
-          <span class="muted">Service Type</span>
-          <input aria-label="Service Type" placeholder="e.g., Post-construction, Commercial, Deep clean" />
-        </label>
-        <label class="full">
-          <span class="muted">Message</span>
-          <textarea rows="5" aria-label="Message" placeholder="Tell us about your space and preferred dates"></textarea>
-        </label>
-        <div class="full">
-          <button class="btn" type="submit">Request a Quote</button>
-        </div>
+        <button type="submit" class="btn-primary">Get My Quote</button>
       </form>
-
-      <aside class="contact-info" aria-label="Business contact information">
-        <h3 style="margin:.25rem 0 .75rem">Pure Elegance Cleaners</h3>
-        <p style="margin:.25rem 0">☎️ <a href="tel:+12265057777">+1 (226) 505-7777</a></p>
-        <p style="margin:.25rem 0">✉️ <a href="mailto:info@pureelegancecleaners.com">info@pureelegancecleaners.com</a></p>
-        <p style="margin:.25rem 0">🌐 www.pureelegancecleaners.com</p>
-        <hr style="border:none;border-top:1px solid rgba(26,26,46,.1);margin:1rem 0" />
-        <p class="muted" style="font-size:.95rem">Service Area: City & surrounding suburbs. Weekday and weekend appointments available.</p>
-      </aside>
     </div>
-  </div>
-</section>
+  </section>
 
-  <footer role="contentinfo">
-    <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1.2rem 0;gap:1rem">
-      <div style="display:flex;align-items:center;gap:.6rem">
-        <strong>Pure Elegance Cleaners</strong>
-        <span style="opacity:.7">• Where Cleanliness Meets Elegance</span>
-      </div>
-      <div style="opacity:.8">© <span id="year">2025</span> Pure Elegance Cleaners. All rights reserved.</div>
+  <!-- Booking Form -->
+  <section id="booking" class="form-section alt-bg">
+    <div class="container">
+      <h2>Book a Cleaning</h2>
+      <form data-booking-form>
+        <label>
+          Name
+          <input type="text" name="name" required/>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required/>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" required/>
+        </label>
+        <label>
+          Service Type
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Residential Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Move-In / Move-Out</option>
+            <option>Deep Cleaning</option>
+          </select>
+        </label>
+        <label>
+          Preferred Date
+          <input type="date" name="date" required/>
+        </label>
+        <label>
+          Notes
+          <textarea name="notes" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn-primary">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@pureelegancecleaners.com">info@pureelegancecleaners.com</a></p>
+    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    <p>Address: 123 Elegance Street, Cityville</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Pure Elegance Cleaners. All Rights Reserved.</p>
     </div>
   </footer>
 
