@@ -5,31 +5,31 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Set your public rate here and it updates everywhere
+  // Centralized rate (easily change here)
   const PUBLIC_RATE = 0.25;
   document.querySelectorAll('#rateValue, #rateValue2').forEach(el => {
     if (el) el.textContent = PUBLIC_RATE.toFixed(2);
   });
 
-  // Handle all forms with [data-form] attribute
+  // Handle all forms marked with [data-form]
   const forms = document.querySelectorAll('form[data-form]');
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Collect form data
-      const formData = new FormData(form);
-      const formValues = {};
-      formData.forEach((value, key) => {
-        formValues[key] = value;
-      });
+      const formType = form.getAttribute("data-form") || "contact";
 
-      console.log("Form submitted:", form.getAttribute("data-form"), formValues);
+      // Collect form data into an object
+      const formData = new FormData(form);
+      const formValues = Object.fromEntries(formData.entries());
+
+      // Debug log for developer
+      console.log(`Form submitted [${formType}]:`, formValues);
 
       // Feedback for user
-      alert(`Thank you! Your ${form.getAttribute("data-form")} form has been submitted.`);
+      alert(`✅ Thank you! Your ${formType} request has been received.`);
 
-      // Reset form
+      // Reset form after submit
       form.reset();
     });
   });
