@@ -5,28 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pure Elegance Cleaners – Where Cleanliness Meets Elegance</title>
   <meta name="description" content="Pure Elegance Cleaners: Residential, commercial, post-construction, move-in/move-out, deep cleaning, and specialty services with an elegant, premium touch." />
+  
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Pure Elegance Cleaners",
-  "image": "assets/img/logo.svg",
-  "telephone": "+1-226-505-7777",
-  "email": "info@pureelegancecleaners.com",
-  "url": "https://www.pureelegancecleaners.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "",
-    "addressRegion": "",
-    "addressCountry": "CA"
-  },
-  "description": "Residential, commercial, post-construction, move-in/move-out, deep cleaning, and specialty services.",
-  "priceRange": "$$"
-}
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pure Elegance Cleaners",
+    "image": "https://www.pureelegancecleaners.com/assets/img/logo.svg",
+    "telephone": "+1-226-505-7777",
+    "email": "info@pureelegancecleaners.com",
+    "url": "https://www.pureelegancecleaners.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M5V 2T6",
+      "addressCountry": "CA"
+    },
+    "description": "Residential, commercial, post-construction, move-in/move-out, deep cleaning, and specialty services.",
+    "priceRange": "$$",
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 09:00-15:00"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/pureelegancecleaners",
+      "https://www.instagram.com/pureelegancecleaners"
+    ]
+  }
   </script>
 </head>
 <body>
@@ -34,7 +50,6 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Main">
       <a class="brand" href="#home" aria-label="Pure Elegance Cleaners home">
-       <!-- <img src="assets/img/logo.svg" alt="Pure Elegance Cleaners logo" />-->
         <img src="assets/img/pec_img.jpeg" alt="Pure Elegance Cleaners logo"/>
         <div>
           <div class="brand-title">
@@ -65,7 +80,7 @@
           <div class="rate" aria-label="Rate per square foot">
             <div>
               <div style="opacity:.8;font-weight:600">Rate</div>
-              <div class="price">${}<span id="rateValue">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
+              <div class="price">$<span id="rateValue">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
             </div>
           </div>
         </div>
@@ -132,7 +147,7 @@
         <div style="margin-top:1rem" class="rate">
           <div>
             <div style="opacity:.9">Typical rate</div>
-            <div class="price">${}<span id="rateValue2">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
+            <div class="price">$<span id="rateValue2">0.25</span> <span style="font-size:1rem;font-weight:600">/ sq. ft</span></div>
           </div>
         </div>
         <p class="muted" style="font-size:.9rem;margin-top:.75rem">*Final pricing depends on size, condition, access, and scope.</p>
@@ -170,32 +185,31 @@
     </div>
   </section>
 
-    <!-- Booking Form -->
+  <!-- Booking Form -->
   <section id="booking">
     <div class="container">
       <h2 class="section-title">Book a Cleaning</h2>
       <p class="muted" style="margin-bottom:1rem">Choose your service and preferred date—we’ll confirm shortly.</p>
-      
-      <form aria-label="Book a cleaning" data-contact-form class="contact-form">
+      <form aria-label="Book a cleaning" data-form="booking" class="contact-form">
         <label>
           <span class="muted">Full Name</span>
-          <input type="text" required placeholder="Jane Doe" />
+          <input type="text" name="name" required placeholder="Jane Doe" />
         </label>
         <label>
           <span class="muted">Email</span>
-          <input type="email" required placeholder="you@example.com" />
+          <input type="email" name="email" required placeholder="you@example.com" />
         </label>
         <label>
           <span class="muted">Phone</span>
-          <input type="tel" required placeholder="(226) 505-7777" />
+          <input type="tel" name="phone" required placeholder="(226) 505-7777" />
         </label>
         <label>
           <span class="muted">Preferred Date</span>
-          <input type="date" required />
+          <input type="date" name="date" required />
         </label>
         <label class="full">
           <span class="muted">Service Type</span>
-          <select required>
+          <select name="service" required>
             <option value="">Select a service</option>
             <option>Residential Cleaning</option>
             <option>Commercial Cleaning</option>
@@ -207,7 +221,7 @@
         </label>
         <label class="full">
           <span class="muted">Notes</span>
-          <textarea rows="4" placeholder="Any details we should know?"></textarea>
+          <textarea name="notes" rows="4" placeholder="Any details we should know?"></textarea>
         </label>
         <div class="full">
           <button class="btn" type="submit">Confirm Booking</button>
@@ -216,36 +230,35 @@
     </div>
   </section>
 
-  <!-- Quotation Form -->
+  <!-- Quote Form -->
   <section id="quote">
     <div class="container">
       <h2 class="section-title">Request a Free Quote</h2>
       <p class="muted" style="margin-bottom:1rem">Tell us about your space and we’ll send you a fast, no-obligation estimate.</p>
-      
-      <form aria-label="Request a quote" data-contact-form class="contact-form">
+      <form aria-label="Request a quote" data-form="quote" class="contact-form">
         <label>
           <span class="muted">Your Name</span>
-          <input type="text" required placeholder="Jane Doe" />
+          <input type="text" name="name" required placeholder="Jane Doe" />
         </label>
         <label>
           <span class="muted">Email</span>
-          <input type="email" required placeholder="you@example.com" />
+          <input type="email" name="email" required placeholder="you@example.com" />
         </label>
         <label>
           <span class="muted">Phone</span>
-          <input type="tel" placeholder="(226) 505-7777" />
+          <input type="tel" name="phone" placeholder="(226) 505-7777" />
         </label>
         <label class="full">
           <span class="muted">Property Size</span>
-          <input type="text" placeholder="e.g. 1500 sq. ft, 3 bed / 2 bath" />
+          <input type="text" name="size" placeholder="e.g. 1500 sq. ft, 3 bed / 2 bath" />
         </label>
         <label class="full">
           <span class="muted">Service Type</span>
-          <input type="text" placeholder="Post-construction, Deep Clean, etc." />
+          <input type="text" name="service" placeholder="Post-construction, Deep Clean, etc." />
         </label>
         <label class="full">
           <span class="muted">Message</span>
-          <textarea rows="4" placeholder="Any specific details?"></textarea>
+          <textarea name="message" rows="4" placeholder="Any specific details?"></textarea>
         </label>
         <div class="full">
           <button class="btn" type="submit">Get My Quote</button>
@@ -254,56 +267,56 @@
     </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="muted" style="margin-bottom:1rem">Call, email, or use the form—our team will respond promptly.</div>
 
- <!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="muted" style="margin-bottom:1rem">Call, email, or use the form—our team will respond promptly.</div>
+      <div class="contact">
+        <form aria-label="Request a quote" data-form="contact" class="contact-form">
+          <label class="full">
+            <span class="muted">Your Name</span>
+            <input name="name" required placeholder="Jane Doe" />
+          </label>
+          <label>
+            <span class="muted">Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            <span class="muted">Phone</span>
+            <input type="tel" name="phone" placeholder="(226) 505-7777" />
+          </label>
+          <label class="full">
+            <span class="muted">Location & Size</span>
+            <input name="location" placeholder="Address or area • Approx. square footage" />
+          </label>
+          <label class="full">
+            <span class="muted">Service Type</span>
+            <input name="service" placeholder="e.g., Post-construction, Commercial, Deep clean" />
+          </label>
+          <label class="full">
+            <span class="muted">Message</span>
+            <textarea name="message" rows="5" placeholder="Tell us about your space and preferred dates"></textarea>
+          </label>
+          <div class="full">
+            <button class="btn" type="submit">Request a Quote</button>
+          </div>
+        </form>
 
-    <div class="contact">
-      <form aria-label="Request a quote" data-contact-form class="contact-form">
-        <label class="full">
-          <span class="muted">Your Name</span>
-          <input aria-label="Your Name" required placeholder="Jane Doe" />
-        </label>
-        <label>
-          <span class="muted">Email</span>
-          <input type="email" aria-label="Email" required placeholder="you@example.com" />
-        </label>
-        <label>
-          <span class="muted">Phone</span>
-          <input type="tel" aria-label="Phone" placeholder="(226) 505-7777" />
-        </label>
-        <label class="full">
-          <span class="muted">Location & Size</span>
-          <input aria-label="Location and size" placeholder="Address or area • Approx. square footage" />
-        </label>
-        <label class="full">
-          <span class="muted">Service Type</span>
-          <input aria-label="Service Type" placeholder="e.g., Post-construction, Commercial, Deep clean" />
-        </label>
-        <label class="full">
-          <span class="muted">Message</span>
-          <textarea rows="5" aria-label="Message" placeholder="Tell us about your space and preferred dates"></textarea>
-        </label>
-        <div class="full">
-          <button class="btn" type="submit">Request a Quote</button>
-        </div>
-      </form>
-
-      <aside class="contact-info" aria-label="Business contact information">
-        <h3 style="margin:.25rem 0 .75rem">Pure Elegance Cleaners</h3>
-        <p style="margin:.25rem 0">☎️ <a href="tel:+12265057777">+1 (226) 505-7777</a></p>
-        <p style="margin:.25rem 0">✉️ <a href="mailto:info@pureelegancecleaners.com">info@pureelegancecleaners.com</a></p>
-        <p style="margin:.25rem 0">🌐 www.pureelegancecleaners.com</p>
-        <hr style="border:none;border-top:1px solid rgba(26,26,46,.1);margin:1rem 0" />
-        <p class="muted" style="font-size:.95rem">Service Area: City & surrounding suburbs. Weekday and weekend appointments available.</p>
-      </aside>
+        <aside class="contact-info" aria-label="Business contact information">
+          <h3 style="margin:.25rem 0 .75rem">Pure Elegance Cleaners</h3>
+          <p style="margin:.25rem 0">☎️ <a href="tel:+12265057777">+1 (226) 505-7777</a></p>
+          <p style="margin:.25rem 0">✉️ <a href="mailto:info@pureelegancecleaners.com">info@pureelegancecleaners.com</a></p>
+          <p style="margin:.25rem 0">🌐 www.pureelegancecleaners.com</p>
+          <hr style="border:none;border-top:1px solid rgba(26,26,46,.1);margin:1rem 0" />
+          <p class="muted" style="font-size:.95rem">Service Area: City & surrounding suburbs. Weekday and weekend appointments available.</p>
+        </aside>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
   <footer role="contentinfo">
     <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1.2rem 0;gap:1rem">
       <div style="display:flex;align-items:center;gap:.6rem">
@@ -314,6 +327,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <!-- JS -->
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
