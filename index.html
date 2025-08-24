@@ -170,89 +170,75 @@
     </div>
   </section>
 
+  
     <!-- Booking Form -->
-  <section id="booking">
-    <div class="container">
-      <h2 class="section-title">Book a Cleaning</h2>
-      <p class="muted" style="margin-bottom:1rem">Choose your service and preferred date—we’ll confirm shortly.</p>
-      
-      <form aria-label="Book a cleaning" data-contact-form class="contact-form">
-        <label>
-          <span class="muted">Full Name</span>
-          <input type="text" required placeholder="Jane Doe" />
-        </label>
-        <label>
-          <span class="muted">Email</span>
-          <input type="email" required placeholder="you@example.com" />
-        </label>
-        <label>
-          <span class="muted">Phone</span>
-          <input type="tel" required placeholder="(226) 505-7777" />
-        </label>
-        <label>
-          <span class="muted">Preferred Date</span>
-          <input type="date" required />
-        </label>
-        <label class="full">
-          <span class="muted">Service Type</span>
-          <select required>
-            <option value="">Select a service</option>
-            <option>Residential Cleaning</option>
-            <option>Commercial Cleaning</option>
-            <option>Move-In / Move-Out</option>
-            <option>Post-Construction</option>
-            <option>Deep Cleaning</option>
-            <option>Specialty</option>
-          </select>
-        </label>
-        <label class="full">
-          <span class="muted">Notes</span>
-          <textarea rows="4" placeholder="Any details we should know?"></textarea>
-        </label>
-        <div class="full">
-          <button class="btn" type="submit">Confirm Booking</button>
-        </div>
-      </form>
-    </div>
-  </section>
+ <form aria-label="Book a cleaning" data-form="booking" class="form-section">
+  <label>
+    <span class="muted">Full Name</span>
+    <input type="text" required placeholder="Jane Doe" />
+  </label>
+  <label>
+    <span class="muted">Email</span>
+    <input type="email" required placeholder="you@example.com" />
+  </label>
+  <label>
+    <span class="muted">Phone</span>
+    <input type="tel" required placeholder="(226) 505-7777" />
+  </label>
+  <label>
+    <span class="muted">Preferred Date</span>
+    <input type="date" required />
+  </label>
+  <label class="full">
+    <span class="muted">Service Type</span>
+    <select required>
+      <option value="">Select a service</option>
+      <option>Residential Cleaning</option>
+      <option>Commercial Cleaning</option>
+      <option>Move-In / Move-Out</option>
+      <option>Post-Construction</option>
+      <option>Deep Cleaning</option>
+      <option>Specialty</option>
+    </select>
+  </label>
+  <label class="full">
+    <span class="muted">Notes</span>
+    <textarea rows="4" placeholder="Any details we should know?"></textarea>
+  </label>
+  <div class="full">
+    <button class="btn" type="submit">Confirm Booking</button>
+  </div>
+</form>
 
-  <!-- Quotation Form -->
-  <section id="quote">
-    <div class="container">
-      <h2 class="section-title">Request a Free Quote</h2>
-      <p class="muted" style="margin-bottom:1rem">Tell us about your space and we’ll send you a fast, no-obligation estimate.</p>
-      
-      <form aria-label="Request a quote" data-contact-form class="contact-form">
-        <label>
-          <span class="muted">Your Name</span>
-          <input type="text" required placeholder="Jane Doe" />
-        </label>
-        <label>
-          <span class="muted">Email</span>
-          <input type="email" required placeholder="you@example.com" />
-        </label>
-        <label>
-          <span class="muted">Phone</span>
-          <input type="tel" placeholder="(226) 505-7777" />
-        </label>
-        <label class="full">
-          <span class="muted">Property Size</span>
-          <input type="text" placeholder="e.g. 1500 sq. ft, 3 bed / 2 bath" />
-        </label>
-        <label class="full">
-          <span class="muted">Service Type</span>
-          <input type="text" placeholder="Post-construction, Deep Clean, etc." />
-        </label>
-        <label class="full">
-          <span class="muted">Message</span>
-          <textarea rows="4" placeholder="Any specific details?"></textarea>
-        </label>
-        <div class="full">
-          <button class="btn" type="submit">Get My Quote</button>
-        </div>
-      </form>
-    </div>
-  </section>
+<form aria-label="Request a quote" data-form="quote" class="form-section">
+  <label>
+    <span class="muted">Your Name</span>
+    <input type="text" required placeholder="Jane Doe" />
+  </label>
+  <label>
+    <span class="muted">Email</span>
+    <input type="email" required placeholder="you@example.com" />
+  </label>
+  <label>
+    <span class="muted">Phone</span>
+    <input type="tel" placeholder="(226) 505-7777" />
+  </label>
+  <label class="full">
+    <span class="muted">Property Size</span>
+    <input type="text" placeholder="e.g. 1500 sq. ft, 3 bed / 2 bath" />
+  </label>
+  <label class="full">
+    <span class="muted">Service Type</span>
+    <input type="text" placeholder="Post-construction, Deep Clean, etc." />
+  </label>
+  <label class="full">
+    <span class="muted">Message</span>
+    <textarea rows="4" placeholder="Any specific details?"></textarea>
+  </label>
+  <div class="full">
+    <button class="btn" type="submit">Get My Quote</button>
+  </div>
+</form>
 
 
  <!-- Contact -->
