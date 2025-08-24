@@ -9,6 +9,7 @@
   --white:#ffffff;
 }
 
+/* Reset & base */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
@@ -22,7 +23,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .container{width:min(1120px,90vw);margin-inline:auto}
 
-/* Header & Nav */
+/* Header & Navigation */
 header{
   position:sticky;top:0;z-index:50;
   background:rgba(248,245,240,.85);
@@ -47,6 +48,7 @@ header{
   color: var(--navy);
 }
 
+/* Buttons */
 .btn{
   display:inline-block;
   padding:.75rem 1.1rem;
@@ -55,7 +57,7 @@ header{
   border:2px solid var(--gold);
   color:var(--white);
   background:linear-gradient(135deg,var(--gold),var(--gold-2));
-  transition:.2s
+  transition:.2s;
 }
 .btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(212,175,55,.25)}
 .btn.outline{background:transparent;color:var(--gold)}
@@ -116,70 +118,26 @@ section{padding:3.5rem 0;border-top:1px solid rgba(26,26,46,.08)}
 
 .contact-form form input,
 .contact-form form textarea,
+.contact-form form select,
 .contact-form form button {
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Footer */
-footer{background:var(--navy);color:#e7e7ee}
-
-/* Responsive Breakpoints */
-@media (max-width: 920px){
-  .hero-inner{grid-template-columns:1fr;gap:1.75rem}
-  .services .card{grid-column:span 6}
-  .pricing{grid-template-columns:1fr}
-  .cta{flex-direction:column;text-align:center}
-}
-
-@media (max-width: 768px){
-  .contact {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-  }
-  .contact-info,
-  .contact-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 640px){
-  .menu-toggle{display:block}
-  .nav ul{
-    display:none;
-    flex-direction:column;
-    background:var(--white);
-    position:absolute;
-    top:100%;
-    right:1rem;
-    border:1px solid rgba(26,26,46,.1);
-    border-radius:.75rem;
-    padding:1rem;
-    box-shadow:0 6px 16px rgba(0,0,0,.1);
-  }
-  .nav ul.open{display:flex}
-  .services .card{grid-column:span 12}
-  form{grid-template-columns:1fr;gap:1.25rem}
-  input,textarea{font-size:1rem}
-  .hero-inner{padding:2rem 0}
-  .hero h1{font-size:1.8rem}
-  .rate{justify-content:center;width:100%}
-}
-
-@media (max-width: 480px){
-  .services .card{padding:1rem}
-  .price-big{font-size:1.6rem}
-  .btn{padding:.65rem 1rem;font-size:.9rem}
-}
-
-/* === Shared Form Styles (Contact, Quote, Booking) === */
+/* Forms */
 .form-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 2rem;
   margin: 2rem 0;
+}
+
+.form-section .form-row {
+  display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .form-section .form-info,
@@ -234,11 +192,43 @@ footer{background:var(--navy);color:#e7e7ee}
   box-shadow: 0 10px 22px rgba(212,175,55,.25);
 }
 
-/* === Responsive Fix === */
-@media (max-width: 768px) {
-  .form-section {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+/* Footer */
+footer{
+  background:var(--navy);
+  color:#e7e7ee;
+  text-align:center;
+  padding:2rem 0;
+  font-size:.95rem;
 }
 
+/* Responsive Breakpoints */
+@media (max-width: 920px){
+  .hero-inner{grid-template-columns:1fr;gap:1.75rem}
+  .services .card{grid-column:span 6}
+  .pricing{grid-template-columns:1fr}
+  .cta{flex-direction:column;text-align:center}
+}
+
+@media (max-width: 768px){
+  .contact { flex-direction: column; gap:1.5rem; margin:1.5rem 0 }
+  .contact-info, .contact-form { width:100% }
+  .form-section { flex-direction: column; gap:1.5rem }
+}
+
+@media (max-width: 640px){
+  .menu-toggle{display:block}
+  .nav ul{display:none; flex-direction:column; background:var(--white); position:absolute; top:100%; right:1rem; border:1px solid rgba(26,26,46,.1); border-radius:.75rem; padding:1rem; box-shadow:0 6px 16px rgba(0,0,0,.1)}
+  .nav ul.open{display:flex}
+  .services .card{grid-column:span 12}
+  form{grid-template-columns:1fr; gap:1.25rem}
+  input,textarea{font-size:1rem}
+  .hero-inner{padding:2rem 0}
+  .hero h1{font-size:1.8rem}
+  .rate{justify-content:center;width:100%}
+}
+
+@media (max-width: 480px){
+  .services .card{padding:1rem}
+  .price-big{font-size:1.6rem}
+  .btn{padding:.65rem 1rem;font-size:.9rem}
+}
